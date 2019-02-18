@@ -50,6 +50,7 @@ class Crawler {
             $rawHTML = $response->getBody()->getContents();
         }
 
+        // Check meta redirects
         if ( $redirectUrl = $this->getRefreshURL( $rawHTML ) )
 		{
 			$response = $guzzle->get( $redirectUrl, $this->config()->get('browser'));
