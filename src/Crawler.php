@@ -94,7 +94,7 @@ class Crawler {
 		if ( !preg_match('!<meta content=["\']?[0-9];\s*url=["\']?([^"\'>]+)["\']? http-equiv=["\']?refresh["\']?!i', $html, $match ) )
 			return false;
 
-		$redirectUrl = str_replace('&amp;', '&', trim($match[1]));
+    $redirectUrl = str_replace('&amp;', '&', trim($match[1]));
 		return $redirectUrl;
 	}
 
