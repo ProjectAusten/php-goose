@@ -27,7 +27,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/ProjectAusten/php-dom-wrapper"
+            "url": "https://github.com/projectausten/php-dom-wrapper"
         }
     ],
     "autoload": {
