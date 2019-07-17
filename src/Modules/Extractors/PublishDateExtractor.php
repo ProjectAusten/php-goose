@@ -203,7 +203,7 @@ class PublishDateExtractor extends AbstractModule implements ModuleInterface {
         foreach ($nodes as $node) {
             try {
                 $json = json_decode($node->text());
-                if (isset($json->dateCreated)) {
+                if (isset($json->dateCreated) && is_string( $json->dateCreated )) {
                     $dt = new \DateTime($json->dateCreated);
                     break;
                 }
